@@ -1,0 +1,66 @@
+{
+  "name": "Post",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The headline of the post"
+    },
+    "subtitle": {
+      "type": "string",
+      "description": "A short dek / excerpt shown under the title"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-friendly identifier used in /post/:slug"
+    },
+    "content": {
+      "type": "string",
+      "description": "Rich text body (HTML) produced by the editor"
+    },
+    "cover_image": {
+      "type": "string",
+      "description": "Public file URL of the cover image"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "coffee",
+        "cafes",
+        "pilates",
+        "wellness",
+        "travel"
+      ],
+      "description": "The pillar category"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Free-form tags for related content"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "published"
+      ],
+      "default": "draft"
+    },
+    "published_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Shown as the hero / featured post of the month"
+    }
+  },
+  "required": [
+    "title",
+    "slug",
+    "category"
+  ]
+}
