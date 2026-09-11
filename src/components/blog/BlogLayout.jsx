@@ -1,15 +1,13 @@
-import { Outlet } from "react-router-dom";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import React from 'react';
+import { Outlet } from 'react-router-dom';
 
 export default function BlogLayout() {
   return (
     <div className="min-h-screen bg-[#FFF0F6]">
-      <Navbar />
+      {/* This renders your Home.jsx exactly as it is without duplication */}
       <main>
         <Outlet />
       </main>
-      <Footer />
     </div>
   );
 }
