@@ -113,9 +113,33 @@ export default function Home() {
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 md:gap-x-12 gap-y-16 md:gap-y-24">
-            {gridPosts.map((post, i) => (
-              <PostCard key={post.id} post={post} index={i} />
-            ))}
+            {gridPosts.map((post, i) => (import React from 'react';
+
+const Home = () => {
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      {/* Header Space */}
+      <header className="mb-12 text-center">
+        <h1 className="text-4xl font-bold mb-4">Welcome to My Blog</h1>
+        <p className="text-gray-600 text-lg">Writing, ideas, and updates coming soon via Substack.</p>
+      </header>
+
+      {/* Center Entry Box Placeholder */}
+      <main className="grid gap-8">
+        <article className="p-6 border border-gray-100 rounded-lg shadow-sm bg-white">
+          <h2 className="text-2xl font-semibold mb-2">Blog Content Migration in Progress</h2>
+          <p className="text-gray-500 mb-4">Our design framework is ready! We are currently routing our main feed through to the WordPress Reader and Substack networks.</p>
+          <div className="inline-block px-4 py-2 bg-slate-800 text-white rounded text-sm font-medium">
+            Read on Substack
+          </div>
+        </article>
+      </main>
+    </div>
+  );
+};
+
+export default Home;
+)}
           </div>
         )}
       </section>
